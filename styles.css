@@ -1,0 +1,113 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+    height: 100vh; /* Make sure the body is full height */
+    margin: 0; /* Remove default margins */
+}
+
+.chat-container {
+    height: 100vh; /* Full height of the viewport */
+    width: 400px; /* Set the width */
+    margin: 0 auto; /* Center it horizontally */
+    background: #0567c9;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #aaa;
+    display: flex;
+    flex-direction: column; /* Allow vertical stacking of elements */
+}
+
+.chat-box {
+    flex: 1; /* Allow the chat box to grow and take up available space */
+    overflow-y: auto;
+    border: 1px solid #2177cc;
+    background-color: #a3d9ff06;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.chat-box .bot,
+.chat-box .user {
+    /* Styling remains the same */
+}
+
+input[type="text"] {
+    border-radius: 10px;
+    border: solid 1px #2177cc;
+    background-color: #b7d2ed;
+    width: 75%;
+    padding: 8px;
+    color: #000000;
+    margin-top: auto; /* Push the input to the bottom of the container */
+}
+
+button {
+    background-color: #2177cc;
+    color: #f0f0f0;
+    font-weight: bolder;
+    border-radius: 10px;
+    border: #2177cc solid 1px;
+    padding: 8px 10px;
+}
+
+/* animations remain the same */
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* responsive styles remain the same, but modify height settings accordingly */
+@media (max-width: 600px) {
+    .chat-container {
+        width: 90%; /* Adjust width for small screens */
+    }
+    .chat-box {
+        height: calc(100% - 100px); /* Adjust for footer */
+    }
+}
+
+/* for medium screens */
+@media (min-width: 600px) and (max-width: 900px) {
+    .chat-container {
+        width: 80%;
+    }
+}
+
+/* for large screens */
+@media (min-width: 900px) {
+    .chat-container {
+        width: 70%;
+    }
+}
+
+/* for extra large screens */
+@media (min-width: 1200px) {
+    .chat-container {
+        width: 60%;
+    }
+}
+
+/* for extra small screens */
+@media (max-width: 400px) {
+    .chat-container {
+        width: 100%;
+    }
+}
